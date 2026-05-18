@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 248 250 252;
+    --fg: 15 23 42;
+    --muted: 100 116 139;
+    --card: 255 255 255;
+    --border: 226 232 240;
+    --accent: 13 148 136;
+  }
+  .dark {
+    --bg: 9 9 11;
+    --fg: 250 250 250;
+    --muted: 161 161 170;
+    --card: 24 24 27;
+    --border: 39 39 42;
+    --accent: 45 212 191;
+  }
+  html {
+    @apply antialiased scroll-smooth;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-zinc-950 dark:text-zinc-50 font-sans;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .glass-nav {
+    @apply bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-slate-200/80 dark:border-zinc-800/80;
+  }
+}
